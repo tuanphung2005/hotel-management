@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 -- Database: `hotel_management`
 --
 
+use hotel_management;
+
 -- --------------------------------------------------------
 
 --
@@ -132,6 +134,7 @@ INSERT INTO `rooms` (`roomNumber`, `roomType`, `price`, `status`) VALUES
 --
 -- Table structure for table `users`
 --
+
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
