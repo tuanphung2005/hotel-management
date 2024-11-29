@@ -60,6 +60,22 @@ public class SignUpController implements Initializable {
                 "What is the name of the town where you were born?");
     }
 
+    private boolean isUsernameExists(String username) {
+        String query = "SELECT COUNT(*) FROM users WHERE username = ?";
+        try {
+            connection = dbConnection.getConnection();
+            pst = connection.prepareStatement(query);
+            pst.setString(1, username);
+            var rs = pst.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     @FXML
     public void handleSignupAction(javafx.event.ActionEvent actionEvent) {
         String name_text = name.getText();
@@ -80,16 +96,14 @@ public class SignUpController implements Initializable {
         if (name_text.equals("") || username_text.equals("") || password_text.equals("") || gender_text.equals("")
                 || question_text.equals("") || answer_text.equals("") || address_text.equals("")) {
             OptionPane("Every Field is required", "Error Message");
+        } else if (isUsernameExists(username_text)) {
+            OptionPane("Username already exists", "Error Message");
         } else {
             String insert = "INSERT INTO users(name, username, password, gender, securityQuestion, answer, address)"
                     + "VALUES (?, ?, ?, ?, ?, ?, ?)";
             connection = dbConnection.getConnection();
             try {
                 pst = connection.prepareStatement(insert);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
                 pst.setString(1, name_text);
                 pst.setString(2, username_text);
                 pst.setString(3, password_text);
