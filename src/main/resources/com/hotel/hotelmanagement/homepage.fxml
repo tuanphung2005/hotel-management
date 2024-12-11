@@ -8,23 +8,23 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.hotelmanagement.HomePageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.hotelmanagement.HomePageController">
    <children>
-      <AnchorPane layoutY="-1.0" prefHeight="125.0" prefWidth="1000.0" style="-fx-background-color: #2D3347;">
+      <AnchorPane layoutY="-1.0" prefHeight="125.0" prefWidth="1000.0" style="-fx-background-color: #ffffff; -fx-border-image-width: 10px; -fx-border-color: #cccc;">
          <children>
-            <Label layoutX="27.0" layoutY="39.0" text="HOTEL" textFill="#2196f3">
+            <Label layoutX="27.0" layoutY="39.0" text="HOTEL" textFill="#7bed9f">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>
             </Label>
-            <Label layoutX="137.0" layoutY="39.0" text="MANAGEMENT SYSTEM" textFill="WHITE">
+            <Label layoutX="137.0" layoutY="39.0" text="MANAGEMENT SYSTEM">
                <font>
                   <Font name="System Bold" size="32.0" />
                </font>
             </Label>
-            <ImageView fx:id="logout" fitHeight="60.0" fitWidth="60.0" layoutX="904.0" layoutY="33.0" onMouseClicked="#handleLogout" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logout" fitHeight="36.0" fitWidth="34.0" layoutX="927.0" layoutY="45.0" onMouseClicked="#handleLogout">
                <image>
-                  <Image url="@res/icons8-logout-60.png" />
+                  <Image url="@res/right-from-bracket-solid.png" />
                </image>
             </ImageView>
          </children>

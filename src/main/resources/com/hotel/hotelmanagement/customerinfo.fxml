@@ -7,57 +7,62 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #2D3347;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.hotelmanagement.CustomerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.hotelmanagement.CustomerController">
    <children>
-      <TextField fx:id="price" layoutX="176.0" layoutY="685.0" prefHeight="25.0" prefWidth="250.0" promptText="Total Price" />
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="685.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="price" layoutX="187.0" layoutY="685.0" prefHeight="25.0" prefWidth="250.0" promptText="Total Price" />
+      <TextField fx:id="name" layoutX="185.0" layoutY="160.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Name" />
+      <TextField fx:id="inDate" layoutX="187.0" layoutY="535.0" prefHeight="25.0" prefWidth="250.0" promptText="Check in Date" />
+      <TextField fx:id="outDate" layoutX="187.0" layoutY="610.0" prefHeight="25.0" prefWidth="250.0" promptText="Check out Date" />
+      <TextField fx:id="phone" layoutX="187.0" layoutY="235.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Phone Number" />
+      <TextField fx:id="gender" layoutX="187.0" layoutY="310.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Gender" />
+      <TextField fx:id="email" layoutX="186.0" layoutY="385.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Email" />
+      <TextField fx:id="nationality" layoutX="187.0" layoutY="460.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Nationality" />
+      <Label layoutX="120.0" layoutY="68.0" text="CUSTOMER" textFill="#7bed9f">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="151.0" layoutY="160.0">
          <image>
-            <Image url="@res/icons8-expensive-price-24.png" />
+            <Image url="@res/icons8-customer-30.png" />
          </image>
       </ImageView>
-      <TextField fx:id="name" layoutX="174.0" layoutY="160.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Name" />
-      <TextField fx:id="inDate" layoutX="176.0" layoutY="535.0" prefHeight="25.0" prefWidth="250.0" promptText="Check in Date" />
-      <TextField fx:id="outDate" layoutX="176.0" layoutY="610.0" prefHeight="25.0" prefWidth="250.0" promptText="Check out Date" />
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="153.0" layoutY="237.0">
          <image>
-            <Image url="@res/icons8-user-24.png" />
+            <Image url="@res/phone-solid.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="535.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="149.0" layoutY="315.0">
          <image>
-            <Image url="@res/icons8-date-to-24.png" />
+            <Image url="@res/venus-mars-solid.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="152.0" layoutY="387.0">
          <image>
-            <Image url="@res/icons8-date-from-24.png" />
+            <Image url="@res/envelope-solid.png" />
          </image>
       </ImageView>
-      <TextField fx:id="phone" layoutX="176.0" layoutY="235.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Phone Number" />
-      <TextField fx:id="gender" layoutX="176.0" layoutY="310.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Gender" />
-      <TextField fx:id="email" layoutX="175.0" layoutY="385.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Email" />
-      <TextField fx:id="nationality" layoutX="176.0" layoutY="460.0" prefHeight="25.0" prefWidth="250.0" promptText="Customer Nationality" />
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="21.0" fitWidth="17.0" layoutX="153.0" layoutY="463.0">
          <image>
-            <Image url="@res/icons8-gender-24.png" />
+            <Image url="@res/location-dot-solid.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="17.0" layoutX="153.0" layoutY="537.0">
          <image>
-            <Image url="@res/icons8-location-24.png" />
+            <Image url="@res/calendar-plus-solid.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="153.0" layoutY="614.0">
          <image>
-            <Image url="@res/icons8-ringing-phone-24.png" />
+            <Image url="@res/calendar-minus-solid.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="140.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="20.0" fitWidth="22.0" layoutX="153.0" layoutY="688.0">
          <image>
-            <Image url="@res/icons8-mail-24.png" />
+            <Image url="@res/money-bills-solid.png" />
          </image>
       </ImageView>
-      <Label layoutX="107.0" layoutY="54.0" text="CUSTOMER INFORMATION" textFill="WHITE">
+      <Label layoutX="288.0" layoutY="68.0" text="INFORMATION">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
