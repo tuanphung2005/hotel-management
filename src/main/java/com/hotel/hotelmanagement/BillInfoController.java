@@ -145,7 +145,14 @@ public class BillInfoController implements Initializable {
         String checkOut = "";
         String totalDay = "";
         String totalPrice = "";
-        String path = "C:\\Users\\Mr.Cuong\\IdeaProjects\\HotelManagement\\res\\";
+        String path = System.getProperty("user.dir") + File.separator + "bills" + File.separator;
+        
+        // Create bills directory if it doesn't exist
+        File directory = new File(path);
+        if (!directory.exists()) {
+            directory.mkdirs();
+        }
+
         String billQuery = "SELECT b.billID, c.customerIDNumber, c.customerName, c.customerPhoneNo, r.roomNumber, r.roomType, r.price, res.checkInDate, res.checkOutDate, (r.price * DATEDIFF(res.checkOutDate, res.checkInDate)) AS totalPrice, DATEDIFF(res.checkOutDate, res.checkInDate) AS totalDay FROM bills b\n" +
                 "INNER JOIN reservations res ON b.reservationID = res.reservationID\n" +
                 "INNER JOIN rooms r ON r.roomNumber = res.roomNumber\n" +

@@ -121,7 +121,7 @@ public class ForgotController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.initStyle(StageStyle.UTILITY);
         alert.setTitle(title);
-        alert.setHeaderText(null);
+        alert.setHeaderText(null);  
         alert.setContentText(message);
         alert.showAndWait();
     }

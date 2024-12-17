@@ -124,9 +124,19 @@ public class BillController implements Initializable {
     public void clickBill(MouseEvent event) throws IOException {
         if (event.getClickCount() == 2) {
             if (billTable.getSelectionModel().getSelectedItem() != null) {
-                String path = "C:\\Users\\Mr.Cuong\\IdeaProjects\\HotelManagement\\res\\";
+                String path = System.getProperty("user.dir") + File.separator + "bills" + File.separator;
                 Bill selectedBill = billTable.getSelectionModel().getSelectedItem();
                 File file = new File(path + "bill" + selectedBill.getBillID() + ".pdf");
+                
+                if (!file.exists()) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Bill PDF file not found!");
+                    alert.showAndWait();
+                    return;
+                }
+
                 if (file.toString().endsWith(".pdf"))
                     Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + file);
                 else {
